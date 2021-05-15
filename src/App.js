@@ -2,24 +2,6 @@ import "./App.css";
 import axios from "axios";
 import {useEffect, useState} from "react";
 
-{
-  /* 
-UI where the user is given a 
-quote and a selection of buttons with characters names.
-When they select the correct name - a correct sign comes up
-otherwise try again. 
-
-api => https://opentdb.com/api.php?amount=10&category=11&difficulty=medium&type=multiple
-  quote
-  quote attributed to 
-  other characters 
-
-  map the other characters to buttons and mix
-  the correct character in with them. 
-
-  
-*/
-}
 const initialState = [
   {
     category: "Entertainment: Film",
@@ -79,8 +61,8 @@ function App() {
             <button
               style={{width: "100px", height: "150px", margin: "20px"}}
               onClick={() => {
-                if (answer == questions[questionNumber].correct_answer) {
-                  if (questionNumber == questions.length - 1) {
+                if (answer === questions[questionNumber].correct_answer) {
+                  if (questionNumber === questions.length - 1) {
                     if ({points} < 0) {
                       alert(`Go back to School`);  
                     } 
